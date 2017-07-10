@@ -1,0 +1,29 @@
+/*******************************/
+/***       BASE STYLES       ***/
+/*******************************/
+
+/***         LAYOUT        ***/
+
+*
+  box-sizing: border-box
+
+
+/***         GRID        ***/
+
+//desktop styles
+@for $i from 1 through 12
+  .col-#{$i}
+    width: calc(100% / 12 * #{$i})
+
+
+//mobile styles
+@media screen and (max-width: $bp-sm)
+  @for $i from 1 through 12
+    .col-sm-#{$i}
+      width: calc(100% / 12 * #{$i})
+
+
+/***         IMAGES        ***/
+
+img
+  width: 100%
