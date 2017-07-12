@@ -5,7 +5,36 @@ html(lang="en")
 
   body
 
+    section(class="intro")
+      div(class="intro__cover")
+      //iframe(id="ytplayer" type="text/html" src="https://www.youtube.com/embed/tg00YEETFzg?autoplay=1&amp;frameborder=0&amp;controls=0&amp;modestbranding=1&amp;showinfo=0&amp;rel=0&amp;disablekb=1&amp;start=60&amp;iv_load_policy=3")
+      div(id="ytplayer")
+      script(src="js/yt-video.js")
 
+    nav.sidebar.flex-column
+      ul.navbar
+        li.navbar__item: a.navbar__link(href="#") Home
+        li.navbar__item: a.navbar__link(href="#") Tour
+        li.navbar__item: a.navbar__link(href="#") Bio
+        li.navbar__item: a.navbar__link(href="#") Music
+        li.navbar__item: a.navbar__link(href="#") Gallery
+        li.navbar__item: a.navbar__link(href="#") Video
+        li.navbar__item: a.navbar__link(href="#") News
+        li.navbar__item: a.navbar__link(href="#") Contact
+
+      .social-media
+        .flex-row
+          a.fa.fa-facebook.fa-lg(href="https://www.facebook.com/" target="_blank")
+          a.fa.fa-instagram.fa-lg(href="https://www.instagram.com/" target="_blank")
+        .flex-row
+          a.fa.fa-youtube-play.fa-lg(href="https://www.youtube.com/" target="_blank")
+          a.fa.fa-spotify.fa-lg(href="https://www.spotify.com/" target="_blank")
+        .flex-row
+          a.fa.fa-soundcloud.fa-lg(href="https://www.soundcloud.com/" target="_blank")
+          a.fa.fa-music.fa-lg(href="https://www.apple.com/ca/music/" target="_blank")
+
+
+    section(class="blank-space")
 
 
     footer

@@ -2,16 +2,10 @@
 /***       TYPOGRAPHY        ***/
 /*******************************/
 
-/***    EXTERNAL FONTS    ***/
+/***    FONTS    ***/
+html
+  font-family: "Montserrat", sans-serif
 
-@font-face
-  font-family: 'Futura New'
-  src: url('../fonts/FTN45.otf')
-
-@font-face
-  font-family: 'Futura New'
-  src: url('../fonts/FTN65.otf')
-  font-weight: bold
 
 
 /***    ELEMENTS STYLES    ***/
@@ -19,13 +13,15 @@
 html
   font-size: 100%
 
-body
-  font-family: "Helvetica Neue", sans-serif
-
+html, a:link, a:visited
+  color: white
 
 a:link, a:visited
-  color: $primary-color
   text-decoration: none
+
+
+
+
 
 h1, h2
   font-size: 2.75rem
