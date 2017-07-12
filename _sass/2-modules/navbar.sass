@@ -6,31 +6,66 @@
 
 .sidebar
   position: fixed
-  top: 75px
-  left: 75px
+  top: 10vh
+  left: -100px
   width: 120px
-  min-height: 60vh
+  height: 80vh
   padding: 10px 12px 20px 0
   justify-content: space-between
   align-items: flex-end
+  transition: left 0.6s cubic-bezier(0.65,-0.24, 0.76, 1.33)
+  transform: translate3d(-3000px, 0, 0);
 
-  &:before, &:after
-    content: ""
-    display: block
+
+  &.is-visible
+    animation: bounceInLeft 1s ease-in-out forwards
+
+  &.is-open
+    left: calc(50% - 60px)
+
+  @media screen and (min-width: $bp-small)
+    top: 150px
+    left: 75px
+    height: auto
+    min-height: 60vh
+
+
+
+
+.sidebar__mobile-control
+  display: block
+  width: 30px
+  height: 30px
+  +position(absolute, calc(50% - 15px) -30px null null)
+  background-color: $green
 
   &:before
-    height: 100%
-    width: 200px
-    +position(absolute, 0px null null -200px)
-    transform: skewY(-45deg)
-    transform-origin: right top
+    content: ""
+    display: block
+    border-top: 8px solid transparent
+    border-bottom: 8px solid transparent
+    border-left: 8px solid white
+    +position(absolute, calc(50% - 8px) calc(50% - 4px) null null)
+    transition: all 0.6s linear
 
   &:after
-    width: 100%
-    height: 200px
-    +position(absolute, null null -200px 0px)
-    transform: skewX(-45deg)
-    transform-origin: left top
+    content: ""
+    display: block
+    border-top: 21px solid transparent
+    border-bottom: 21px solid transparent
+    border-left: 21px solid $green-sh
+    +position(absolute, 16px 12px null null)
+    transform: rotate(-135deg)
+
+  &.is-open
+    &:before
+      transform: rotateY(180deg)
+
+  @media screen and (min-width: $bp-small)
+    visibility: hidden
+
+
+
 
 
 .navbar

@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    $(".navbar-mobile-toggle").click(function () {
+    $(".sidebar__mobile-control").click(function () {
         $(this).toggleClass("is-open");
-        $(this).prev().toggleClass("is-open");
+        $(this).parent().toggleClass("is-open");
     });
 });
