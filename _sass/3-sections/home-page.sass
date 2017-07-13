@@ -1,5 +1,6 @@
 .intro
   overflow: hidden
+  font-size: 0
 
   #ytplayer
     min-width: 100%
@@ -18,7 +19,8 @@
 
 
 .home__tour,
-.home__release
+.home__release,
+.home__video
   height: 200vh
   @media screen and (min-width: $bp-small)
     height: 100vh
@@ -31,8 +33,14 @@
   background:
     image: url(../img/home__release.jpg)
 
+.home__video
+  background:
+    image: url(../img/home__video.jpg)
+
+
 .home__tour__heading,
-.home__release__heading
+.home__release__heading,
+.home__video__heading
   +position(absolute, 40vh -40vw null null)
   @media screen and (min-width: $bp-small)
     width: 600px
