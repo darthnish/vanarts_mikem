@@ -1,0 +1,23 @@
+.news
+  background:
+    image: url(../img/news.jpg)
+
+.news__feed
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-start
+
+.news__block
+  padding: 15px
+  font-weight: 100
+  font-size: 1rem
+  position: relative
+  margin-bottom: 50px
+  z-index: 2
+  @media screen and (min-width: $bp-medium)
+    margin-right: 50px
+
+.news__date,
+.news__text,
+.news__tags
+  margin-top: 15px
