@@ -1,0 +1,14 @@
+.visible-sm
+  display: block
+  @media screen and (min-width: $bp-small)
+    display: none
+
+.visible-md
+  display: block
+  @media screen and (max-width: $bp-small), screen and (min-width: $bp-medium)
+    display: none
+
+.visible-lg
+  display: block
+  @media screen and (max-width: $bp-medium)
+    display: none

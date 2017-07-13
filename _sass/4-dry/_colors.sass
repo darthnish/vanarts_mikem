@@ -5,18 +5,51 @@
 /***    GREEN    ***/
 
 .sidebar
-  background-color: #19DAAE
+  background-color: $green
 
   &:before,
   &:after
-    background-color: rgba(22, 168, 135, 0.8)
+    background-color: $green-sh
 
 
 /***    PURPLE    ***/
 
-.logo
-  background-color: #99269E
+.logo,
+.home__release .btn,
+.home__release .text__shade
+  background-color: $purple
 
 .logo:before,
-.logo:after
-  background-color: rgba(111, 28, 114, 0.8)
+.logo:after,
+.home__release .btn:before,
+.home__release .btn:after
+  background-color: $purple-sh
+
+.home__release__heading
+  text-shadow: -10px -10px 0px $purple-sh
+
+.home__release .text__shade,
+.home__release__cover
+  box-shadow: -10px 10px 0px $purple-sh
+
+
+/***    GREENBLUE    ***/
+
+.home__tour .text__shade
+  background-color: $greenblue
+
+
+.home__tour .text__shade
+  box-shadow: -10px 10px 0px $greenblue-sh
+
+.home__tour__heading
+  text-shadow: -10px -10px 0px $greenblue-sh
+
+
+/***    PINK    ***/
+.home__tour .btn
+  background-color: $pink
+
+.home__tour .btn:before,
+.home__tour .btn:after
+  background-color: $pink-sh

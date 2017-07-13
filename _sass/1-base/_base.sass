@@ -7,6 +7,7 @@
 *
   box-sizing: border-box
 
+
 .flex-row
   display: flex
   flex-direction: row
@@ -15,19 +16,58 @@
   display: flex
   flex-direction: column
 
+
+.push-down-100vh-sm
+  width: 100%
+  height: 100vh
+
+.push-down-20vh-md
+  width: 100%
+  height: 20vh
+
+.push-down-30vh-md
+  width: 100%
+  height: 30vh
+
+
+.push-down-15vh-lg
+  width: 100%
+  height: 15vh
+
+.push-down-30vh-lg
+  width: 100%
+  height: 30vh
+
+
+
+
+.bottom-offset-50
+  margin-bottom: 50px
+
+.bottom-offset-80
+  margin-bottom: 80px
+
+
 /***         GRID        ***/
 
-//desktop styles
+//mobile styles
 @for $i from 1 through 12
   .col-#{$i}
     width: calc(100% / 12 * #{$i})
 
-
-//mobile styles
-@media screen and (max-width: $bp-small)
+//tablet styles
+@media screen and (min-width: $bp-small)
   @for $i from 1 through 12
-    .col-sm-#{$i}
+    .col-md-#{$i}
       width: calc(100% / 12 * #{$i})
+
+//desktop styles
+@media screen and (min-width: $bp-medium)
+  @for $i from 1 through 12
+    .col-lg-#{$i}
+      width: calc(100% / 12 * #{$i})
+
+
 
 
 /***         IMAGES        ***/

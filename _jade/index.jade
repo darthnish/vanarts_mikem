@@ -5,22 +5,15 @@ html(lang="en")
 
   body
 
-    section(class="intro")
-      div(class="intro__cover")
-      //iframe(id="ytplayer" type="text/html" src="https://www.youtube.com/embed/tg00YEETFzg?autoplay=1&amp;frameborder=0&amp;controls=0&amp;modestbranding=1&amp;showinfo=0&amp;rel=0&amp;disablekb=1&amp;start=60&amp;iv_load_policy=3")
-      div(id="ytplayer")
-      script(src="js/yt-video.js")
-
-
-    //.logo
-    //  .logo__container
-    //    img(src="img/logo.svg")
+    .logo.logo__home
+      .logo__container
+        img(src="img/logo.svg")
 
     nav.sidebar.flex-column
-      .sidebar__mobile-control
+      .sidebar__mobile-control.visible-sm
 
       ul.navbar
-        li.navbar__item: a.navbar__link(href="#") Home
+        li.navbar__item: a.navbar__link.active(href="#") Home
         li.navbar__item: a.navbar__link(href="#") Tour
         li.navbar__item: a.navbar__link(href="#") Bio
         li.navbar__item: a.navbar__link(href="#") Music
@@ -40,10 +33,45 @@ html(lang="en")
           a.fa.fa-soundcloud.fa-lg(href="https://www.soundcloud.com/" target="_blank")
           a.fa.fa-music.fa-lg(href="https://www.apple.com/ca/music/" target="_blank")
 
+    section(class="intro")
+      div(class="intro__cover")
+      div(id="ytplayer")
+      script(src="js/yt-video.js")
 
+
+    section.home__tour
+      h2.home__tour__heading World tour
+      .push-down-100vh-sm.visible-sm
+      .push-down-30vh-md.visible-md
+      .push-down-30vh-lg.visible-lg
+      .flex-row.bottom-offset-80
+        .col-2.col-md-3
+        .col-9.col-md-5
+          p.text__shade Aliquam ut lacinia massa, nec dictum sapien. Donec nec erat a felis egestas hendrerit. In sollicitudin, arcu ut imperdiet lobortis, felis nulla pharetra leo
+      .flex-row
+        .col-2.col-md-3
+        a.btn.btn-md(href="#") Check the dates
+
+    section.home__release
+      h2.home__release__heading Latest release
+      .push-down-100vh-sm.visible-sm
+      .push-down-20vh-md.visible-md
+      .push-down-15vh-lg.visible-lg
+      .flex-row.bottom-offset-80
+        .col-2.col-md-3
+        .col-9.col-md-5
+          .col-12.col-md-12.col-lg-6
+            img.home__release__cover.bottom-offset-50(src="img/home__release__cover.jpg")
+          p.text__shade MIKEM ft. LORDE
+          br
+          p.text__shade One night more
+      .flex-row
+        .col-2.col-md-3
+        a.btn.btn-md(href="#") Stream it now
 
 
     section(class="blank-space")
+
 
 
     footer
