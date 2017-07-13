@@ -1,3 +1,9 @@
+$(document).ready(function () {
+    $('.sidebar').removeClass('is-visible');
+    $('.logo').removeClass('is-visible');
+    $('.logo').addClass('logo__home');
+});
+
 $(window).scroll(function () {
     var $this = $(this);
     var wScroll = $this.scrollTop();

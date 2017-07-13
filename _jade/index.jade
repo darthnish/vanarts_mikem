@@ -5,33 +5,7 @@ html(lang="en")
 
   body
 
-    .logo.logo__home
-      .logo__container
-        img(src="img/logo.svg")
-
-    nav.sidebar.flex-column
-      .sidebar__mobile-control.visible-sm
-
-      ul.navbar
-        li.navbar__item: a.navbar__link.active(href="#") Home
-        li.navbar__item: a.navbar__link(href="#") Tour
-        li.navbar__item: a.navbar__link(href="#") Bio
-        li.navbar__item: a.navbar__link(href="#") Music
-        li.navbar__item: a.navbar__link(href="#") Gallery
-        li.navbar__item: a.navbar__link(href="#") Video
-        li.navbar__item: a.navbar__link(href="#") News
-        li.navbar__item: a.navbar__link(href="#") Contact
-
-      .social-media
-        .flex-row
-          a.fa.fa-facebook.fa-lg(href="https://www.facebook.com/" target="_blank")
-          a.fa.fa-instagram.fa-lg(href="https://www.instagram.com/" target="_blank")
-        .flex-row
-          a.fa.fa-youtube-play.fa-lg(href="https://www.youtube.com/" target="_blank")
-          a.fa.fa-spotify.fa-lg(href="https://www.spotify.com/" target="_blank")
-        .flex-row
-          a.fa.fa-soundcloud.fa-lg(href="https://www.soundcloud.com/" target="_blank")
-          a.fa.fa-music.fa-lg(href="https://www.apple.com/ca/music/" target="_blank")
+    include modules/_header
 
     section(class="intro")
       div(class="intro__cover")
@@ -88,9 +62,8 @@ html(lang="en")
 
 
 
-    footer
-      include modules/_footer
-
+    include modules/_footer
+    script(src="js/scrolling-home.js")
 
 
 

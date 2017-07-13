@@ -1,0 +1,24 @@
+.tour
+  background:
+    image: url(../img/tour.jpg)
+
+.tour__event,
+.tour__event__block
+  display: flex
+  flex-direction: column
+
+
+  @media screen and (min-width: $bp-medium)
+    flex-direction: row
+    align-items: baseline
+
+.tour__event
+  margin-bottom: 70px
+
+.tour__event__block
+  margin-bottom: 30px
+
+  @media screen and (min-width: $bp-medium)
+    margin-bottom: 0
+    margin-right: 50px
+

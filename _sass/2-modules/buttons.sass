@@ -9,6 +9,12 @@
   font-weight: 500
   cursor: pointer
   position: relative
+  &:hover
+    filter: hue-rotate(45deg)
+
+  &.disabled
+    pointer-events: none
+    cursor: default
 
 //sizes
 
@@ -18,6 +24,27 @@
 
 
 // colors
+
+.btn-alt
+  &:before, &:after
+    content: ""
+    display: block
+
+  &:before
+    height: 100%
+    width: 20px
+    +position(absolute, 0px null null -20px)
+    transform: skewY(-45deg)
+    transform-origin: right top
+
+  &:after
+    width: 100%
+    height: 20px
+    +position(absolute, null null -20px 0px)
+    transform: skewX(-45deg)
+    transform-origin: left top
+
+
 
 .btn-primary
   color: $text-color-invert

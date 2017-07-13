@@ -35,24 +35,31 @@
 
 /***    GREENBLUE    ***/
 
-.home__tour .text__shade
+.home__tour .text__shade,
+.tour__event__block
+
   background-color: $greenblue
 
 
-.home__tour .text__shade
+.home__tour .text__shade,
+.tour__event__block
   box-shadow: -10px 10px 0px $greenblue-sh
 
-.home__tour__heading
+.home__tour__heading,
+.tour__heading
   text-shadow: -10px -10px 0px $greenblue-sh
 
 
 /***    PINK    ***/
 .home__tour .btn,
-.home__video .text__shade
+.home__video .text__shade,
+.tour .btn-alt
   background-color: $pink
 
 .home__tour .btn:before,
-.home__tour .btn:after
+.home__tour .btn:after,
+.tour .btn-alt:after,
+.tour .btn-alt:before
   background-color: $pink-sh
 
 .home__video__heading
@@ -61,3 +68,12 @@
 .home__video .text__shade,
 .home__video .flex-video
   box-shadow: -10px 10px 0px $pink-sh
+
+
+/***    GREY    ***/
+.btn.disabled
+  background-color: $grey
+
+.disabled.btn:before,
+.disabled.btn:after
+  background-color: $grey-sh
