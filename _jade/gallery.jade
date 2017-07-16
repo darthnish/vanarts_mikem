@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+  head
+    include modules/_head
+
+  body
+
+    include modules/_header
+
+    main.gallery
+      h1.gallery__heading Gallery
+      .push-down-120vh-sm.visible-sm
+      .push-down-30vh-md.visible-md
+      .push-down-20vh-lg.visible-lg
+      .flex-row
+        .col-2.col-md-3.col-lg-2
+        .col-9.col-md-6.col-lg-6.gallery__slider
+          img.gallery__slider__img(src="img/gallery/gallery_1.jpg" alt="MikeM show photo #1")
+          img.gallery__slider__img(src="img/gallery/gallery_2.jpg" alt="MikeM show photo #2")
+          img.gallery__slider__img(src="img/gallery/gallery_3.jpg" alt="MikeM show photo #3")
+          img.gallery__slider__img(src="img/gallery/gallery_4.jpg" alt="MikeM show photo #4")
+          img.gallery__slider__img(src="img/gallery/gallery_5.jpg" alt="MikeM show photo #5")
+          img.gallery__slider__img(src="img/gallery/gallery_6.jpg" alt="MikeM show photo #6")
+      .flex-row
+        .col-2.col-md-3.col-lg-2
+        .col-9.col-md-6.col-lg-6.gallery__basement
+          .col-12.gallery__caption-container
+            p.text__shade.gallery__caption Photo #1
+          p.btn.btn-md.btn__prev(onclick="imgSlider(-1);") Prev
+          p.btn.btn-md.btn__next(onclick="imgSlider(1);") Next
+      .push-down-35vh-sm.visible-sm
+
+
+    include modules/_footer
+    script(src="js/img-slider.js")
+
+
+
+

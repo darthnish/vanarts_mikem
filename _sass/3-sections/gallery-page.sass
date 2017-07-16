@@ -1,0 +1,30 @@
+.gallery
+  background:
+    image: url(../img/gallery.jpg)
+
+  .btn__prev,
+  .btn__next
+    position: relative
+
+.gallery__slider
+  position: relative
+
+  font-size: 0
+
+.gallery__slider__img
+  transition: all 0.5s ease-in-out
+
+.gallery__slider__img:not(:first-child)
+  +position(absolute, 0px null null 0px)
+  opacity: 0
+
+
+.gallery__basement
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-top: 30px
+
+.gallery__caption-container
+  text-align: center
+  margin-bottom: 20px

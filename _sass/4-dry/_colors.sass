@@ -80,8 +80,16 @@
 
 
 /***    BLUE    ***/
-.news__block
+.news__block,
+.gallery .btn__prev,
+.gallery .btn__next
   background-color: $blue
+
+.gallery .btn__prev:before,
+.gallery .btn__prev:after,
+.gallery .btn__next:before,
+.gallery .btn__next:after
+  background-color: $blue-sh
 
 .news__block
   box-shadow: -10px 10px 0px $blue-sh
@@ -92,6 +100,7 @@
   text-shadow: -10px -10px 0px $darkblue-sh
 
 /***    GREY    ***/
+
 .btn.disabled,
 .contact .btn__cancel
   background-color: $grey
@@ -104,6 +113,7 @@
 
 
 /***    YELLOW    ***/
+
 .contact__block h1
   background-color: $yellow
 
@@ -112,3 +122,16 @@
 
 .contact__block h1
   box-shadow: -10px 10px 0px $yellow-sh
+
+
+/***    CRIMSON    ***/
+
+.gallery__caption
+  background-color: $crimson
+
+.gallery__heading
+  text-shadow: -10px -10px 0px $crimson-sh
+
+.gallery__slider img,
+.gallery__caption
+  box-shadow: -10px 10px 0px $crimson-sh

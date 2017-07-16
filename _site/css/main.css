@@ -494,6 +494,10 @@ textarea {
   width: 100%;
   height: 100vh; }
 
+.push-down-35vh-sm {
+  width: 100%;
+  height: 35vh; }
+
 .push-down-20vh-md {
   width: 100%;
   height: 20vh; }
@@ -686,7 +690,8 @@ h1, h2, h3 {
 .home__video__heading,
 .tour__heading,
 .news__heading,
-.contact__heading {
+.contact__heading,
+.gallery__heading {
   font-size: 6.8rem;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
@@ -699,7 +704,8 @@ h1, h2, h3 {
     .home__video__heading,
     .tour__heading,
     .news__heading,
-    .contact__heading {
+    .contact__heading,
+    .gallery__heading {
       font-size: 9rem;
       line-height: 6.5rem; } }
 
@@ -730,27 +736,30 @@ h1, h2, h3 {
       right: -20vh;
       text-align: right; } }
 
-.contact__heading {
+.contact__heading,
+.gallery__heading {
   position: absolute;
   top: 60vh;
   right: -45vw; }
   @media screen and (min-width: 450px) {
-    .contact__heading {
+    .contact__heading,
+    .gallery__heading {
       position: fixed;
       width: 600px;
       right: -20vh;
       top: 40vh;
       text-align: right; } }
   @media screen and (min-width: 450px) and (min-width: 780px) {
-    .contact__heading {
+    .contact__heading,
+    .gallery__heading {
       top: 50vh; } }
 
 *::-moz-selection, span::-moz-selection, a::-moz-selection {
-  background-color: #4b286d;
+  background-color: #19DAAE;
   color: #FFFFFF; }
 
 *::selection, span::selection, a::selection {
-  background-color: #4b286d;
+  background-color: #19DAAE;
   color: #FFFFFF; }
 
 /*******************************/
@@ -912,6 +921,12 @@ h1, h2, h3 {
   font-weight: 500;
   cursor: pointer;
   position: relative; }
+  .btn, .btn:before, .btn:after {
+    -webkit-transition: -webkit-filter 0.3s linear;
+    transition: -webkit-filter 0.3s linear;
+    -o-transition: filter 0.3s linear;
+    transition: filter 0.3s linear;
+    transition: filter 0.3s linear, -webkit-filter 0.3s linear; }
   .btn:hover {
     -webkit-filter: hue-rotate(45deg);
             filter: hue-rotate(45deg); }
@@ -952,21 +967,6 @@ h1, h2, h3 {
   -webkit-transform-origin: left top;
       -ms-transform-origin: left top;
           transform-origin: left top; }
-
-.btn-primary {
-  color: #FFFFFF;
-  background-color: #4b286d;
-  border: 1px solid #4b286d;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s; }
-  .btn-primary:link, .btn-primary:visited {
-    color: #FFFFFF; }
-  .btn-primary:hover {
-    background-color: transparent;
-    color: #4b286d; }
-    .btn-primary:hover:link, .btn-primary:hover:visited {
-      color: #4b286d; }
 
 .flex-video {
   height: 0;
@@ -1622,6 +1622,45 @@ h1, h2, h3 {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
+.gallery {
+  background-image: url(../img/gallery.jpg); }
+  .gallery .btn__prev,
+  .gallery .btn__next {
+    position: relative; }
+
+.gallery__slider {
+  position: relative;
+  font-size: 0; }
+
+.gallery__slider__img {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+.gallery__slider__img:not(:first-child) {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0; }
+
+.gallery__basement {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px; }
+
+.gallery__caption-container {
+  text-align: center;
+  margin-bottom: 20px; }
+
 /*******************************/
 /***         COLORS         ***/
 /*******************************/
@@ -1706,8 +1745,16 @@ h1, h2, h3 {
           box-shadow: -10px 10px 0px rgba(210, 21, 127, 0.8); }
 
 /***    BLUE    ***/
-.news__block {
+.news__block,
+.gallery .btn__prev,
+.gallery .btn__next {
   background-color: #0BB6F0; }
+
+.gallery .btn__prev:before,
+.gallery .btn__prev:after,
+.gallery .btn__next:before,
+.gallery .btn__next:after {
+  background-color: rgba(11, 121, 162, 0.8); }
 
 .news__block {
   -webkit-box-shadow: -10px 10px 0px rgba(11, 121, 162, 0.8);
@@ -1739,6 +1786,18 @@ h1, h2, h3 {
   -webkit-box-shadow: -10px 10px 0px rgba(204, 159, 38, 0.8);
           box-shadow: -10px 10px 0px rgba(204, 159, 38, 0.8); }
 
+/***    CRIMSON    ***/
+.gallery__caption {
+  background-color: #BF0F50; }
+
+.gallery__heading {
+  text-shadow: -10px -10px 0px rgba(191, 16, 80, 0.8); }
+
+.gallery__slider img,
+.gallery__caption {
+  -webkit-box-shadow: -10px 10px 0px rgba(191, 16, 80, 0.8);
+          box-shadow: -10px 10px 0px rgba(191, 16, 80, 0.8); }
+
 /***    LINK TEXT    ***/
 .navbar,
 .navbar__link:active,
@@ -1759,7 +1818,11 @@ h1, h2, h3 {
 .contact__input-block:before,
 .contact__input-block:after,
 .contact .btn:before,
-.contact .btn:after {
+.contact .btn:after,
+.gallery .btn__prev:before,
+.gallery .btn__prev:after,
+.gallery .btn__next:before,
+.gallery .btn__next:after {
   content: "";
   display: block; }
 
@@ -1768,7 +1831,9 @@ h1, h2, h3 {
 .home__tour .btn:before,
 .home__release .btn:before,
 .contact__input-block:before,
-.contact .btn:before {
+.contact .btn:before,
+.gallery .btn__prev:before,
+.gallery .btn__next:before {
   height: 100%;
   width: 700px;
   position: absolute;
@@ -1786,7 +1851,9 @@ h1, h2, h3 {
 .home__tour .btn:after,
 .home__release .btn:after,
 .contact__input-block:after,
-.contact .btn:after {
+.contact .btn:after,
+.gallery .btn__prev:after,
+.gallery .btn__next:after {
   width: 100%;
   height: 700px;
   position: absolute;
@@ -1801,7 +1868,8 @@ h1, h2, h3 {
 
 /***    RIGHT SHADES    ***/
 .contact__input-block:before,
-.contact .btn:before {
+.contact .btn:before,
+.gallery .btn__next:before {
   -webkit-transform: skewY(45deg);
       -ms-transform: skewY(45deg);
           transform: skewY(45deg);
@@ -1809,7 +1877,8 @@ h1, h2, h3 {
   top: 700px; }
 
 .contact__input-block:after,
-.contact .btn:after {
+.contact .btn:after,
+.gallery .btn__next:after {
   -webkit-transform: skewX(45deg);
       -ms-transform: skewX(45deg);
           transform: skewX(45deg); }
@@ -1821,7 +1890,8 @@ h1, h2, h3 {
 .home__video,
 .tour,
 .news,
-.contact {
+.contact,
+.gallery {
   min-height: 100vh;
   width: 100%;
   position: relative;
@@ -1834,7 +1904,8 @@ h1, h2, h3 {
 .home__video,
 .tour,
 .news,
-.contact {
+.contact,
+.gallery {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
