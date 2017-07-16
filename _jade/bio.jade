@@ -1,0 +1,39 @@
+mixin bio__block (date, text)
+  .bio__block
+    .col-12.col-lg-1
+      p.text__shade.bio__date #{date}
+    .col-12.col-lg-9
+      p.text__shade.bio__text #{text}
+
+doctype html
+html(lang="en")
+  head
+    include modules/_head
+
+  body
+
+    include modules/_header
+
+    main.bio
+      h1.bio__heading Bio
+      .push-down-100vh-sm.visible-sm
+      .push-down-30vh-md.visible-md
+      .push-down-20vh-lg.visible-lg
+      .flex-row
+        .col-2.col-md-3.col-lg-2
+        .col-9.col-md-6.col-lg-6.bio__container
+          p.text__shade.bio__intro Donec varius lectus justo, at efficitur metus facilisis vitae. Ut nisi libero, pretium non enim vel, sollicitudin molestie mauris. Maecenas egestas porta viverra. Integer sit amet velit quis nunc placerat pulvinar. Cras a tortor eu metus pulvinar egestas in nec nulla.
+          +bio__block('2016', 'Vivamus accumsan sodales mi, semper efficitur neque scelerisque eget. Vivamus sit amet velit enim. Vivamus cursus neque diam, nec gravida nibh convallis id.')
+          +bio__block('2015', 'Aenean fringilla at leo at sagittis. Donec varius lectus justo, at efficitur metus facilisis vitae. Ut nisi libero, pretium non enim vel, sollicitudin molestie mauris. Maecenas egestas porta viverra. Integer sit amet velit quis nunc placerat pulvinar. Cras a tortor eu metus pulvinar egestas in nec nulla. Cras hendrerit augue et nibh sodales, nec euismod arcu finibus.')
+          +bio__block('2014', 'Etiam quis sapien ac lacus tristique finibus. Praesent egestas, massa vel tincidunt consectetur, nulla dolor pellentesque nibh, non auctor nulla purus et tortor. Cras ut varius ligula. Duis pretium, ante vitae pharetra congue, nibh metus dictum nulla, ut suscipit nulla velit non orci.')
+          +bio__block('2013', 'Vestibulum dui sapien, blandit sit amet mattis sit amet, pellentesque vitae lectus. Praesent sit amet ornare urna, id pellentesque neque. Sed eleifend quam et ante mollis hendrerit.')
+          +bio__block('2012', 'Mauris imperdiet vel sapien ut iaculis. Sed venenatis, risus sit amet hendrerit interdum, ipsum lorem molestie lectus, sed fringilla nisl diam non ipsum. Integer pretium orci odio, eu sagittis leo imperdiet nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.')
+      .push-down-35vh-sm.visible-sm
+      .push-down-20vh-md.visible-md
+      .push-down-15vh-lg.visible-lg
+
+  include modules/_footer
+
+
+
+
