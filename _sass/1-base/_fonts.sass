@@ -23,15 +23,10 @@ a:link, a:visited
 
 
 
-h1, h2
+
+
+h1, h2, h3
   text-transform: uppercase
-  font-size: 6.8rem
-  transform: rotate(-90deg)
-  line-height: 4.8rem
-  z-index: 3
-  @media screen and (min-width: $bp-medium)
-    font-size: 9rem
-    line-height: 6.5rem
 
 
 .text__shade
@@ -44,7 +39,30 @@ h1, h2
     line-height: 3rem
 
 
-/***    HEADINGS    ***/
+/***    ARTICLE HEADINGS    ***/
+.contact__block h1
+  font-size: 1.5rem
+  display: inline
+  margin-bottom: 14px
+  line-height: 4rem
+
+
+/***    PAGE & SECTIONS HEADINGS    ***/
+
+.home__tour__heading,
+.home__release__heading,
+.home__video__heading,
+.tour__heading,
+.news__heading,
+.contact__heading
+  font-size: 6.8rem
+  transform: rotate(-90deg)
+  line-height: 4.8rem
+  z-index: 3
+  @media screen and (min-width: $bp-medium)
+    font-size: 9rem
+    line-height: 6.5rem
+
 
 .home__tour__heading,
 .home__release__heading,
@@ -64,6 +82,16 @@ h1, h2
     right: -20vh
     text-align: right
 
+.contact__heading
+  +position(absolute, 60vh -45vw null null)
+  @media screen and (min-width: $bp-small)
+    position: fixed
+    width: 600px
+    right: -20vh
+    top: 40vh
+    text-align: right
+    @media screen and (min-width: $bp-medium)
+      top: 50vh
 
 
 

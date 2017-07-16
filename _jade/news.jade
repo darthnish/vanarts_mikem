@@ -1,5 +1,5 @@
 mixin news(image, date, text)
-  .news__block.col-lg-5
+  .news__block.col-lg-4
     img(src="img/news/news_#{image}.jpg")
     p.news__date #{date}
     p.news__text #{text}
@@ -14,13 +14,13 @@ html(lang="en")
 
     include modules/_header
 
-    section.news
-      h2.news__heading News
+    main.news
+      h1.news__heading News
       .push-down-100vh-sm.visible-sm
       .push-down-20vh-md.visible-md
       .push-down-15vh-lg.visible-lg
       .flex-row
-        .col-2.col-md-3.col-lg-3
+        .col-2.col-md-3.col-lg-2
         .col-9.col-md-5.col-lg-7.news__feed
           +news('1', 'June 23rd, 2017', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper iaculis faucibus. Maecenas odio massa, fermentum vitae magna et, accumsan molestie sem. Nulla tempor leo eu nunc sollicitudin, ut blandit sapien vehicula.')
           +news('2', 'June 21st, 2017', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
@@ -29,7 +29,6 @@ html(lang="en")
           +news('5', 'June 4th, 2017', 'Maecenas odio massa, fermentum vitae magna et, accumsan molestie sem. Nulla tempor leo eu nunc sollicitudin, ut blandit sapien vehicula.')
           +news('6', 'May 30th, 2017', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
 
-      //.blank-space
 
 
     include modules/_footer

@@ -1,0 +1,59 @@
+mixin contact__block (title, name, email)
+  article.contact__block
+    h1.text__shade #{title}
+    br
+    p.text__shade #{name}
+    br
+    a.text__shade(href="mailto: #{email}") #{email}
+
+doctype html
+html(lang="en")
+  head
+    include modules/_head
+
+  body
+
+    include modules/_header
+
+    main.contact
+      h1.contact__heading Contact
+      .push-down-120vh-sm.visible-sm
+      .push-down-30vh-md.visible-md
+      .push-down-20vh-lg.visible-lg
+      .flex-row
+        .col-2.col-md-3.col-lg-2
+        .col-9.col-md-5.col-lg-6.contact__container
+          .flex-column.col-lg-5
+            +contact__block('Bookings', 'Mike Smooth Production', 'book@mikem.com')
+            +contact__block('Press & PR', 'City Rebel PR', 'press@cityrebel.com')
+            +contact__block('Music Related', 'MyF Music Inc', 'info@myfmusic.uk')
+          .flex-column.col-lg-5
+            article.contact__block
+              h1.text__shade Get in Touch
+              form.contact__form(name="form-contact", method="post", action="#")
+                .contact__input-block
+                  .input-group
+                    input(type="text" id="name" name="name" tabindex="1" placeholder="Enter your name" required)
+                    label(for="name") Your name
+                  .input-group
+                    input(type="email" id="email" name="email" tabindex="2" placeholder="Enter your email" required)
+                    label(for="email") Your email
+                  .input-group
+                    input(type="text" id="subject" name="subject" tabindex="3" placeholder="Enter subject of message" required)
+                    label(for="subject") Subject
+                  .input-group
+                    textarea(id="message" name="message" rows="6" tabindex="4" placeholder="Enter your message" required)
+                    label(for="message") Message
+                .contact__buttons.flex-row
+                  button.btn.btn-md.btn__send(type="submit" value="Submit") Send
+                  button.btn.btn-md.btn__cancel(type="reset" value="Cancel") Cancel
+
+
+      //.blank-space
+
+
+    include modules/_footer
+
+
+
+

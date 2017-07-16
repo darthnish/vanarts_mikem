@@ -10,12 +10,14 @@
 
 
 
-/***    SHADES    ***/
+/***    LEFT SHADES    ***/
 
 .sidebar,
 .logo,
 .home__tour .btn,
-.home__release .btn
+.home__release .btn,
+.contact__input-block,
+.contact .btn
   &:before, &:after
     content: ""
     display: block
@@ -34,6 +36,16 @@
     transform: skewX(-45deg)
     transform-origin: left top
 
+/***    RIGHT SHADES    ***/
+
+.contact__input-block,
+.contact .btn
+  &:before
+    transform: skewY(45deg)
+    left: 100%
+    top: 700px
+  &:after
+    transform: skewX(45deg)
 
 
 
@@ -44,7 +56,8 @@
 .home__release,
 .home__video,
 .tour,
-.news
+.news,
+.contact
   min-height: 100vh
   width: 100%
   position: relative
@@ -57,7 +70,8 @@
 .home__release,
 .home__video,
 .tour,
-.news
+.news,
+.contact
   background:
     repeat: no-repeat
     size: cover

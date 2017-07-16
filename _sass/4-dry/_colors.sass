@@ -4,12 +4,19 @@
 
 /***    GREEN    ***/
 
-.sidebar
+.sidebar,
+.contact__block p,
+.contact__block a,
+.contact__input-block,
+.contact__form .input-group label
   background-color: $green
-
   &:before,
   &:after
     background-color: $green-sh
+
+.contact__block p,
+.contact__block a
+  box-shadow: -10px 10px 0px $green-sh
 
 
 /***    PURPLE    ***/
@@ -37,7 +44,6 @@
 
 .home__tour .text__shade,
 .tour__event__block
-
   background-color: $greenblue
 
 
@@ -53,13 +59,16 @@
 /***    PINK    ***/
 .home__tour .btn,
 .home__video .text__shade,
-.tour .btn-alt
+.tour .btn-alt,
+.contact .btn__send
   background-color: $pink
 
 .home__tour .btn:before,
 .home__tour .btn:after,
 .tour .btn-alt:after,
-.tour .btn-alt:before
+.tour .btn-alt:before,
+.contact .btn__send:before,
+.contact .btn__send:after
   background-color: $pink-sh
 
 .home__video__heading
@@ -83,9 +92,23 @@
   text-shadow: -10px -10px 0px $darkblue-sh
 
 /***    GREY    ***/
-.btn.disabled
+.btn.disabled,
+.contact .btn__cancel
   background-color: $grey
 
 .disabled.btn:before,
-.disabled.btn:after
+.disabled.btn:after,
+.contact .btn__cancel:before,
+.contact .btn__cancel:after
   background-color: $grey-sh
+
+
+/***    YELLOW    ***/
+.contact__block h1
+  background-color: $yellow
+
+.contact__heading
+  text-shadow: -10px -10px 0px $yellow-sh
+
+.contact__block h1
+  box-shadow: -10px 10px 0px $yellow-sh
