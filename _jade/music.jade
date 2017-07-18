@@ -1,0 +1,44 @@
+mixin music__block (img, link)
+  .music__block
+    img(src="img/music/#{img}")
+    i.music__control.fa.fa-play
+    iframe(width="200px" height="200px" scrolling="no" frameborder="no" src="#{link}")
+    .music__progerss-bar
+    .music__progerss-bar-pseudo
+    .music__volume
+    .music__volume-pseudo
+
+doctype html
+html(lang="en")
+  head
+    include modules/_head
+
+  body
+
+    include modules/_header
+
+    main.music
+      h1.music__heading Music
+      .push-down-100vh-sm.visible-sm
+      .push-down-30vh-md.visible-md
+      .push-down-20vh-lg.visible-lg
+      .flex-row
+        .col-2.col-md-3.col-lg-2
+        .col-9.col-md-6.col-lg-6.music__container
+          +music__block('release_1.jpg', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/174849445&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true')
+          +music__block('release_2.jpg', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/60173536&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true')
+          +music__block('release_3.jpg', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/127026805&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true')
+          +music__block('release_4.jpg', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/121239554&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true')
+          +music__block('release_5.jpg', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/146159376&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true')
+          +music__block('release_6.jpg', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/114311164&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true')
+          +music__block('release_7.jpg', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155081446&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true')
+          +music__block('release_8.jpg', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/153938899&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true')
+          +music__block('release_9.jpg', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/153543206&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true')
+
+
+  include modules/_footer
+  script(src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js" type="text/javascript")
+  script(src="https://w.soundcloud.com/player/api.js" type="text/javascript")
+  script(src="js/music.js" type="text/javascript")
+
+

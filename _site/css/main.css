@@ -691,7 +691,10 @@ h1, h2, h3 {
 .tour__heading,
 .news__heading,
 .contact__heading,
-.gallery__heading {
+.gallery__heading,
+.bio__heading,
+.music__heading,
+.video__heading {
   font-size: 6.8rem;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
@@ -705,7 +708,10 @@ h1, h2, h3 {
     .tour__heading,
     .news__heading,
     .contact__heading,
-    .gallery__heading {
+    .gallery__heading,
+    .bio__heading,
+    .music__heading,
+    .video__heading {
       font-size: 9rem;
       line-height: 6.5rem; } }
 
@@ -741,15 +747,33 @@ h1, h2, h3 {
   position: absolute;
   top: 60vh;
   right: -45vw; }
-  @media screen and (min-width: 450px) {
-    .contact__heading,
-    .gallery__heading {
-      position: fixed;
-      width: 600px;
-      right: -20vh;
-      top: 40vh;
-      text-align: right; } }
+
+.bio__heading {
+  position: absolute;
+  top: 40vh;
+  right: -7vw; }
+
+.music__heading,
+.video__heading {
+  position: absolute;
+  top: 50vh;
+  right: -30vw; }
+
+@media screen and (min-width: 450px) {
+  .bio__heading,
+  .music__heading,
+  .video__heading,
+  .contact__heading,
+  .gallery__heading {
+    position: fixed;
+    width: 600px;
+    right: -20vh;
+    top: 40vh;
+    text-align: right; } }
   @media screen and (min-width: 450px) and (min-width: 780px) {
+    .bio__heading,
+    .music__heading,
+    .video__heading,
     .contact__heading,
     .gallery__heading {
       top: 50vh; } }
@@ -1661,6 +1685,114 @@ h1, h2, h3 {
   text-align: center;
   margin-bottom: 20px; }
 
+.bio {
+  background-image: url(../img/bio.jpg); }
+
+.bio__block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 30px; }
+  .bio__block:first-of-type {
+    margin-top: 80px; }
+  @media screen and (min-width: 780px) {
+    .bio__block {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+
+.music {
+  background-image: url(../img/music.jpg); }
+
+.music__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.music__block {
+  font-size: 0;
+  position: relative;
+  margin-bottom: 60px; }
+  .music__block .fa {
+    font-size: 3rem;
+    color: rgba(111, 28, 114, 0.8); }
+  @media screen and (min-width: 780px) {
+    .music__block {
+      width: -webkit-calc((100% - 120px) / 3);
+      width: calc((100% - 120px) / 3); }
+      .music__block:not(:nth-child(3n)) {
+        margin-right: 60px; } }
+  .music__block iframe {
+    position: absolute;
+    z-index: -100; }
+
+.music__progerss-bar,
+.music__progerss-bar-pseudo {
+  display: block;
+  width: 0;
+  height: 10px;
+  background-color: rgba(210, 21, 127, 0.8);
+  position: absolute;
+  bottom: -10px;
+  left: -10px; }
+
+.music__progerss-bar-pseudo {
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer; }
+
+.music__volume,
+.music__volume-pseudo {
+  display: block;
+  width: 10px;
+  height: 70%;
+  background-color: rgba(22, 168, 135, 0.8);
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top; }
+
+.music__volume-pseudo {
+  height: -webkit-calc(100% - 10px);
+  height: calc(100% - 10px);
+  background-color: transparent;
+  cursor: pointer; }
+
+.music__control {
+  position: absolute;
+  top: -webkit-calc(50% - 1rem);
+  top: calc(50% - 1rem);
+  right: -webkit-calc(50% - 1rem);
+  right: calc(50% - 1rem); }
+
+.video {
+  background-image: url(../img/video.jpg); }
+
+@media screen and (max-width: 780px) {
+  main.video {
+    background-position-x: -700px; } }
+
+@media screen and (max-width: 450px) {
+  main.video {
+    background-position-x: -700px; } }
+
 /*******************************/
 /***         COLORS         ***/
 /*******************************/
@@ -1699,11 +1831,13 @@ h1, h2, h3 {
 .home__release .btn:after {
   background-color: rgba(111, 28, 114, 0.8); }
 
-.home__release__heading {
+.home__release__heading,
+.music__heading {
   text-shadow: -10px -10px 0px rgba(111, 28, 114, 0.8); }
 
 .home__release .text__shade,
-.home__release__cover {
+.home__release__cover,
+.music__block {
   -webkit-box-shadow: -10px 10px 0px rgba(111, 28, 114, 0.8);
           box-shadow: -10px 10px 0px rgba(111, 28, 114, 0.8); }
 
@@ -1725,7 +1859,8 @@ h1, h2, h3 {
 .home__tour .btn,
 .home__video .text__shade,
 .tour .btn-alt,
-.contact .btn__send {
+.contact .btn__send,
+.bio__date {
   background-color: #F62399; }
 
 .home__tour .btn:before,
@@ -1736,11 +1871,13 @@ h1, h2, h3 {
 .contact .btn__send:after {
   background-color: rgba(210, 21, 127, 0.8); }
 
-.home__video__heading {
+.home__video__heading,
+.video__heading {
   text-shadow: -10px -10px 0px rgba(210, 21, 127, 0.8); }
 
 .home__video .text__shade,
-.home__video .flex-video {
+.home__video .flex-video,
+.bio__date {
   -webkit-box-shadow: -10px 10px 0px rgba(210, 21, 127, 0.8);
           box-shadow: -10px 10px 0px rgba(210, 21, 127, 0.8); }
 
@@ -1761,6 +1898,14 @@ h1, h2, h3 {
           box-shadow: -10px 10px 0px rgba(11, 121, 162, 0.8); }
 
 /***    DARKBLUE    ***/
+.bio__text {
+  background-color: #103062; }
+
+.bio__text {
+  -webkit-box-shadow: -10px 10px 0px rgba(16, 39, 74, 0.8);
+          box-shadow: -10px 10px 0px rgba(16, 39, 74, 0.8); }
+
+.bio__heading,
 .news__heading {
   text-shadow: -10px -10px 0px rgba(16, 39, 74, 0.8); }
 
@@ -1776,13 +1921,15 @@ h1, h2, h3 {
   background-color: rgba(68, 68, 68, 0.8); }
 
 /***    YELLOW    ***/
-.contact__block h1 {
+.contact__block h1,
+.bio__intro {
   background-color: #F8BC1C; }
 
 .contact__heading {
   text-shadow: -10px -10px 0px rgba(204, 159, 38, 0.8); }
 
-.contact__block h1 {
+.contact__block h1,
+.bio__intro {
   -webkit-box-shadow: -10px 10px 0px rgba(204, 159, 38, 0.8);
           box-shadow: -10px 10px 0px rgba(204, 159, 38, 0.8); }
 
@@ -1891,7 +2038,10 @@ h1, h2, h3 {
 .tour,
 .news,
 .contact,
-.gallery {
+.gallery,
+.bio,
+.music,
+.video {
   min-height: 100vh;
   width: 100%;
   position: relative;
@@ -1905,7 +2055,10 @@ h1, h2, h3 {
 .tour,
 .news,
 .contact,
-.gallery {
+.gallery,
+.bio,
+.music,
+.video {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
