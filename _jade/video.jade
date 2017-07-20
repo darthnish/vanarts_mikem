@@ -1,6 +1,6 @@
 mixin video__block ()
-  .video__block
-
+  .video__block.flex-video
+    iframe(class="ytplayer" type="text/html" src="https://www.youtube.com/embed/tg00YEETFzg?autoplay=0&amp;frameborder=0&amp;controls=0&amp;modestbranding=1&amp;showinfo=0&amp;rel=0&amp;disablekb=1&amp;start=0&amp;iv_load_policy=3")
 
 doctype html
 html(lang="en")
@@ -15,13 +15,20 @@ html(lang="en")
       h1.video__heading Video
       .push-down-100vh-sm.visible-sm
       .push-down-30vh-md.visible-md
-      .push-down-20vh-lg.visible-lg
+      .push-down-30vh-lg.visible-lg
       .flex-row
-        .col-2.col-md-3.col-lg-2
-        .col-9.col-md-6.col-lg-6
-
+        .col-2.col-md-3.col-lg-3
+        .col-9.col-md-6.col-lg-4.video__container
+          +video__block()
+          +video__block()
+          +video__block()
+          +video__block()
+          +video__block()
+      .push-down-45vh-sm.visible-sm
+      .push-down-30vh-lg.visible-lg
 
   include modules/_footer
+  script(src="js/scrolling-video.js")
 
 
 
