@@ -31,7 +31,7 @@ function onYouTubePlayerAPIReady() {
 }
 
 function onPlayerReady(event) {
-    // event.target.playVideo();
+    event.target.playVideo();
 }
 
 // 5. The API calls this function when the player's state changes.

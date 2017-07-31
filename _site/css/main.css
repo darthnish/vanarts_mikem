@@ -454,6 +454,98 @@ textarea {
     -webkit-transform: none;
             transform: none; } }
 
+@-webkit-keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0; }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in; }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1; }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+  to {
+    -webkit-transform: perspective(400px);
+            transform: perspective(400px); } }
+
+@keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0; }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in; }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1; }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+  to {
+    -webkit-transform: perspective(400px);
+            transform: perspective(400px); } }
+
+@-webkit-keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+            transform: translate3d(0, 3000px, 0); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+            transform: translate3d(0, -20px, 0); }
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+            transform: translate3d(0, 10px, 0); }
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+            transform: translate3d(0, -5px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
+@keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+            transform: translate3d(0, 3000px, 0); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+            transform: translate3d(0, -20px, 0); }
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+            transform: translate3d(0, 10px, 0); }
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+            transform: translate3d(0, -5px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
 /***    COLORS    ***/
 /***    BREAKPOINTS    ***/
 /*******************************/
@@ -1567,10 +1659,15 @@ h1, h2, h3 {
   font-size: 1rem;
   position: relative;
   margin-bottom: 50px;
-  z-index: 2; }
+  z-index: 2;
+  -webkit-transform: translate3d(0, 3000px, 0);
+          transform: translate3d(0, 3000px, 0); }
   @media screen and (min-width: 780px) {
     .news__block {
       margin-right: 50px; } }
+  .news__block.is-visible {
+    -webkit-animation: bounceInUp 0.5s ease-in-out forwards;
+            animation: bounceInUp 0.5s ease-in-out forwards; }
 
 .news__date,
 .news__text,
@@ -1662,18 +1759,32 @@ h1, h2, h3 {
 
 .gallery__slider {
   position: relative;
-  font-size: 0; }
+  font-size: 0;
+  text-align: center; }
+  @media screen and (min-width: 780px) {
+    .gallery__slider {
+      max-height: 50vh; } }
 
 .gallery__slider__img {
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out; }
+  @media screen and (min-width: 780px) {
+    .gallery__slider__img {
+      height: 100%;
+      width: auto; } }
 
 .gallery__slider__img:not(:first-child) {
   position: absolute;
   top: 0px;
   left: 0px;
   opacity: 0; }
+  @media screen and (min-width: 780px) {
+    .gallery__slider__img:not(:first-child) {
+      position: absolute;
+      top: 0px;
+      left: -webkit-calc(50% - 50vh / 9 * 16 / 2);
+      left: calc(50% - 50vh / 9 * 16 / 2); } }
 
 .gallery__basement {
   display: -webkit-box;
@@ -1732,7 +1843,9 @@ h1, h2, h3 {
 .music__block {
   font-size: 0;
   position: relative;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+          transform: perspective(400px) rotate3d(1, 0, 0, 90deg); }
   .music__block .fa {
     font-size: 3rem;
     color: rgba(111, 28, 114, 0.8); }
@@ -1742,9 +1855,13 @@ h1, h2, h3 {
       width: calc((100% - 120px) / 3); }
       .music__block:not(:nth-child(3n)) {
         margin-right: 60px; } }
+  .music__block.is-visible {
+    -webkit-animation: flipInX 1s ease-in-out forwards;
+            animation: flipInX 1s ease-in-out forwards; }
   .music__block iframe {
     position: absolute;
-    z-index: -100; }
+    z-index: -100;
+    opacity: 0; }
 
 .music__progerss-bar,
 .music__progerss-bar-pseudo {
@@ -1809,7 +1926,10 @@ h1, h2, h3 {
   @media screen and (min-width: 450px) {
     .video__block.flex-video {
       padding-bottom: 56.25%;
-      margin-bottom: 50px; } }
+      margin-bottom: 80px; } }
+  @media screen and (min-width: 1500px) {
+    .video__block.flex-video {
+      padding-bottom: 48%; } }
 
 /*******************************/
 /***         COLORS         ***/

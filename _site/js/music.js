@@ -4,6 +4,10 @@ SC.initialize({
 
 $(document).ready(function() {
 
+    setTimeout(function () {
+        animateThumbs();
+    }, 1000);
+
     $('.music__control').click(function() {
         var $this = $(this);
         var widget = getWidgetElement($this);
@@ -73,4 +77,14 @@ function getProgressElement ($this) {
 
 function getVolumeElement ($this) {
     return $($this.parent().children().eq(5));
+}
+
+function animateThumbs() {
+    var $thumbs = $('.music__block');
+
+    $thumbs.each(function (i) {
+        setTimeout(function () {
+            $thumbs.eq(i).addClass('is-visible');
+        }, 500 * (i + 1));
+    })
 }

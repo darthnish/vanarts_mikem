@@ -13,15 +13,22 @@
     color: $purple-sh
   position: relative
   margin-bottom: 60px
+
   @media screen and (min-width: $bp-medium)
     width: calc((100% - 120px) / 3)
     &:not(:nth-child(3n))
       margin-right: 60px
 
+  transform: perspective(400px) rotate3d(1, 0, 0, 90deg)
+
+  &.is-visible
+    animation: flipInX 1s ease-in-out forwards
+
 
   iframe
     position: absolute
     z-index: -100
+    opacity: 0
 
 .music__progerss-bar,
 .music__progerss-bar-pseudo

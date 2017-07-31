@@ -8,15 +8,22 @@
 
 .gallery__slider
   position: relative
-
   font-size: 0
+  text-align: center
+  @media screen and (min-width: $bp-medium)
+    max-height: 50vh
 
 .gallery__slider__img
   transition: all 0.5s ease-in-out
+  @media screen and (min-width: $bp-medium)
+    height: 100%
+    width: auto
 
 .gallery__slider__img:not(:first-child)
   +position(absolute, 0px null null 0px)
   opacity: 0
+  @media screen and (min-width: $bp-medium)
+    +position(absolute, 0px null null calc(50% - 50vh / 9 * 16 / 2))
 
 
 .gallery__basement
