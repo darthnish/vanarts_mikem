@@ -8,7 +8,7 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 
 #rule // set parametr in get-array
-RewriteRule .* index.php?q=$0 [QSA]
+RewriteRule .* index.php?querystring=$0 [QSA]
 #QSA - query string add // enable additional get-parametrs
 
 

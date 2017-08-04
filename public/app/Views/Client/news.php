@@ -1,42 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><title>MikeM | DJ</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="with=device--width, initial-scale=1">
-    <meta name="description" content="This is a student exercise website for the Vancouver Institute of Media Arts">
-    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://use.fontawesome.com/4567abeb9b.js"></script>
-</head>
-<body>
-<div class="logo is-visible">
-    <div class="logo__container"><img src="img/logo.svg"></div>
-</div>
-<nav class="sidebar flex-column is-visible">
-    <div class="sidebar__mobile-control visible-sm"></div>
-    <ul class="navbar">
-        <li class="navbar__item"><a href="/" class="navbar__link active">Home</a></li>
-        <li class="navbar__item"><a href="/tour.html" class="navbar__link">Tour</a></li>
-        <li class="navbar__item"><a href="/bio.html" class="navbar__link">Bio</a></li>
-        <li class="navbar__item"><a href="/music.html" class="navbar__link">Music</a></li>
-        <li class="navbar__item"><a href="/gallery.html" class="navbar__link">Gallery</a></li>
-        <li class="navbar__item"><a href="/video.html" class="navbar__link">Video</a></li>
-        <li class="navbar__item"><a href="/news.html" class="navbar__link">News</a></li>
-        <li class="navbar__item"><a href="/contact.html" class="navbar__link">Contact</a></li>
-    </ul>
-    <div class="social-media">
-        <div class="flex-row"><a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook fa-lg"></a><a
-                href="https://www.instagram.com/" target="_blank" class="fa fa-instagram fa-lg"></a></div>
-        <div class="flex-row"><a href="https://www.youtube.com/" target="_blank" class="fa fa-youtube-play fa-lg"></a><a
-                href="https://www.spotify.com/" target="_blank" class="fa fa-spotify fa-lg"></a></div>
-        <div class="flex-row"><a href="https://www.soundcloud.com/" target="_blank"
-                                 class="fa fa-soundcloud fa-lg"></a><a href="https://www.apple.com/ca/music/"
-                                                                       target="_blank" class="fa fa-music fa-lg"></a>
-        </div>
-    </div>
-</nav>
 <main class="news"><h1 class="news__heading">News</h1>
     <div class="push-down-100vh-sm visible-sm"></div>
     <div class="push-down-20vh-md visible-md"></div>
@@ -75,7 +36,3 @@
         </div>
     </div>
 </main>
-<script src="js/navbar-mobile.js"></script>
-<script src="js/news.js"></script>
-</body>
-</html>

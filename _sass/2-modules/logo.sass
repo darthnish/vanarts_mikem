@@ -1,6 +1,6 @@
 .logo
   width: 240px
-  z-index: 1
+  z-index: 2
   +position(absolute, 40px null null calc(50% - 120px))
   transform: translate(-500px, 500px)
   transition: all 1s ease-out
@@ -19,6 +19,8 @@
     left: 90px
 
   &.logo__home
-    top: calc(100vh + 40px)
+    @media screen and (max-width: $bp-small)
+      top: calc(120vh + 40px)
+
 .logo__container
   padding: 10px
