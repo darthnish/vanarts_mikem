@@ -20,6 +20,8 @@
 
   &.is-visible
     animation: bounceInLeft 1s ease-in-out forwards
+    @media screen and (min-width: $bp-small)
+      animation: slideIn 1s ease-in-out forwards
 
   &.is-open
     left: calc(50% - 60px)
@@ -86,9 +88,9 @@
   &:after
     content: ""
     display: block
-    +position(absolute, 10px 0px null null)
+    +position(absolute, 10px -2px null null)
     height: 0
-    width: 2px
+    width: 4px
     background-color: $link-color
     transition: all 0.5s
 

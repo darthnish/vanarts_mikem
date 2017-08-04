@@ -81,10 +81,12 @@ function getVolumeElement ($this) {
 
 function animateThumbs() {
     var $thumbs = $('.music__block');
+    var $btns = $('.music__btn');
 
     $thumbs.each(function (i) {
         setTimeout(function () {
             $thumbs.eq(i).addClass('is-visible');
+            $btns.eq(i).addClass('is-visible');
         }, 500 * (i + 1));
     })
 }

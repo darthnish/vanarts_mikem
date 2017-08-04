@@ -9,7 +9,8 @@ html(lang="en")
 
     section(class="intro")
       div(class="intro__cover")
-      div(id="ytplayer")
+      .video__wrapper
+        div(id="ytplayer")
       script(src="js/yt-video.js")
 
 
@@ -44,9 +45,9 @@ html(lang="en")
         a.btn.btn-md(href="#") Stream it now
 
 
-    section.home__video
+  section.home__video
       h2.home__video__heading New video
-      .push-down-120vh-sm.visible-sm
+      .push-down-100vh-sm.visible-sm
       .push-down-20vh-md.visible-md
       .push-down-15vh-lg.visible-lg
       .flex-row

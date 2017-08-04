@@ -32,6 +32,24 @@ function onYouTubePlayerAPIReady() {
 
 function onPlayerReady(event) {
     event.target.playVideo();
+
+    $(function() {
+        
+        var ratio = $(window).height()/$(window).width();
+        var m = Math.max($(window).height(), $(window).width());
+        $('.video__wrapper').css({
+            'padding-bottom': (ratio * 100 * 1.2) + '%',
+            'width': ($(window).height() / ($(window).width() / 16 * 9) * $(window).width() * 1.2) + 'px'
+        });
+
+        $(window).scroll(function () {
+            var wScroll = $(this).scrollTop();
+
+            if (wScroll > $(this).height() * 0.8) {
+                stopVideo();
+            }
+        });
+    });
 }
 
 // 5. The API calls this function when the player's state changes.

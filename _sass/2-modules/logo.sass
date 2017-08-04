@@ -7,9 +7,16 @@
 
   &.is-visible
     transform: translate(0, 0)
+    @media screen and (min-width: $bp-small)
+      animation: slideIn 1s 0.2s ease-in-out forwards
 
   @media screen and (min-width: $bp-small)
-    left: 140px
+    position: fixed
+    top: 70px
+    left: 30px
+    width: 130px
+  @media screen and (min-width: $bp-medium)
+    left: 90px
 
   &.logo__home
     top: calc(100vh + 40px)

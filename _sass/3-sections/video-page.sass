@@ -2,6 +2,10 @@
   background:
     image: url(../img/video.jpg)
 
+  @media screen and (max-width: $bp-small)
+    .btn
+      margin-top: 50px
+
 main.video
   @media screen and (max-width: $bp-medium)
     background:
@@ -15,6 +19,7 @@ main.video
   overflow: hidden
   position: relative
   padding-bottom: 55%
+  z-index: 10
   @media screen and (min-width: $bp-small)
     padding-bottom: 56.25%
     margin-bottom: 80px
