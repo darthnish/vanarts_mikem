@@ -1,7 +1,7 @@
 <?php
 return [
     'db' => [
-        'name' => 'nts_test_1',
+        'name' => 'mikem',
         'user' => 'root',
         'pass' => 'root',
         'host' => 'localhost',

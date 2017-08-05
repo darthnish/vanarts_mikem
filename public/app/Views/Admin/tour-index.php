@@ -7,16 +7,18 @@
             <th>Tickets available</th>
             <th colspan="2">Actions</th>
         </tr>
+        <?foreach ($tourInfo as $tour): ?>
         <tr>
-            <td>31/07</td>
-            <td>Rogers arena</td>
-            <td>Vancouver, Canada</td>
-            <td>Yes</td>
+            <td><?=$tour['date']?></td>
+            <td><?=$tour['venue']?></td>
+            <td><?=$tour['city']?></td>
+            <td><?=$tour['is_available']?></td>
 
-            <td class="t-col-sm"><a class="btn btn-xs btn-warning" href=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"  data-toggle="tooltip" data-placement="top" title="Edit article"></span></a></td>
-            <td class="t-col-sm"><a class="btn btn-xs btn-danger" href="" onclick="return confirmDelete();"><span class="glyphicon glyphicon-trash" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Delete article"></span></a></td>
+            <td class="t-col-sm"><a class="btn btn-xs btn-warning" href="/admin/tour/update/<?=$tour['id']?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"  data-toggle="tooltip" data-placement="top" title="Edit date"></span></a></td>
+            <td class="t-col-sm"><a class="btn btn-xs btn-danger" href="/admin/tour/delete/<?=$tour['id']?>" onclick="return confirmDelete();"><span class="glyphicon glyphicon-trash" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Delete date"></span></a></td>
         </tr>
+        <?endforeach;?>
     </table>
     <br>
-    <a class="btn btn-sm btn-info" href="" data-toggle="tooltip" data-placement="top" title="Add new article">+add</a><br>
+    <a class="btn btn-sm btn-info" href="/admin/tour/create" data-toggle="tooltip" data-placement="top" title="Add new date">+add</a><br>
 </section>
