@@ -4,14 +4,11 @@
 namespace App\Controllers;
 
 
-class TourController {
-
-    protected $page;
+class TourController extends AdminController {
 
     public function __construct () {
+        parent::__construct();
+        $this->indexTemplate = 'tour-index';
     }
 
-    public function render () {
-        return $_SERVER['REQUEST_METHOD'];
-    }
 }
