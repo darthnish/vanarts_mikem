@@ -1,0 +1,12 @@
+.news-list__image {
+    width: 100px;
+}
+
+.news-list__date {
+    min-width: 100px;
+}
+
+.news-one__image {
+    margin-top: 20px;
+    width: 200px;
+}

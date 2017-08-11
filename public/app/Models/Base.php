@@ -43,7 +43,7 @@ abstract class Base {
         return $this->db->insert($this->table, $params);
     }
 
-    public function editByID ($id, $params) {
+    public function updateByID ($id, $params) {
         return $this->db->update($this->table, $params, "{$this->primaryKey} = :primaryKey", ['primaryKey' => $id]);
     }
 }

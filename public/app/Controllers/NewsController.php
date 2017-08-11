@@ -4,15 +4,19 @@
 namespace App\Controllers;
 use App\Core\System;
 use App\Core\Traits\ResourceController;
-use App\Models\Tour;
+use App\Models\Image;
+use App\Models\News;
 
-class TourController extends AdminController {
+class NewsController extends AdminController {
 
-    use ResourceController;
+    use ResourceController {
+        create as defaultCreate;
+        edit as defaultEdit;
+    }
 
     protected $sideBar;
     protected $model;
-    protected $name = 'tour';
+    protected $name = 'news';
 
     public function __construct () {
         parent::__construct();
@@ -23,7 +27,19 @@ class TourController extends AdminController {
         ]);
         unset($_SESSION['msg']);
 
-        $this->model = Tour::getInstance();
+        $this->model = News::getInstance();
+    }
+
+    public function create () {
+        $images = Image::getInstance()->getAll();
+
+        return $this->defaultCreate(['images' => $images]);
+    }
+
+    public function edit ($id) {
+        $images = Image::getInstance()->getAll();
+
+        return $this->defaultEdit($id, ['images' => $images]);
     }
 
     protected function manageFormData () {
@@ -34,7 +50,6 @@ class TourController extends AdminController {
                 $request[$key] = htmlspecialchars($value);
             }
 
-            $request['is_available'] = $_POST['is_available'] ?? 0;
             unset($request['button']);
         }
 

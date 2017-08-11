@@ -45,7 +45,7 @@ class App {
                 throw new \Exception('Page not found');
             }
 
-            return $controller->$method();
+            return $controller->$method($parameters);
 
         } catch (\Exception $e) {
             echo $e->getMessage();
