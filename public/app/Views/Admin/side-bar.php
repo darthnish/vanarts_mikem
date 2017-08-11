@@ -3,6 +3,7 @@
         <a href="/admin/tour/index" class="list-group-item <?= $menuActive['tour'] ?? ''?>">Tour</a>
         <a href="/admin/news/index" class="list-group-item <?= $menuActive['news'] ?? ''?>">News</a>
         <a href="/admin/images/index" class="list-group-item <?= $menuActive['images'] ?? ''?>">Images</a>
+        <a href="/admin/users/index" class="list-group-item <?= $menuActive['users'] ?? ''?>">Users</a>
     </div>
     <br><br>
     <?if (isset($msg) && !empty($msg)): ?>
