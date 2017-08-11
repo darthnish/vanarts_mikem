@@ -27,9 +27,14 @@ trait ResourceController {
 
         $request = $this->manageFormData();
 
+        if (!$this->validate($request)) {
+            $_SESSION['errors'] = $this->errors;
+            return header("Location: /admin/{$this->name}/create");
+        }
+
         if ($_POST['button'] == 'save') {
             $this->model->add($request);
-            $_SESSION['msg'] = $this->name . ' record was added';
+            $_SESSION['msg'] = 'New record was added';
         }
 
         return header("Location: /admin/{$this->name}/index");
@@ -50,9 +55,14 @@ trait ResourceController {
 
         $request = $this->manageFormData();
 
+        if (!$this->validate($request)) {
+            $_SESSION['errors'] = $this->errors;
+            return header("Location: /admin/{$this->name}/edit/{$id}");
+        }
+
         if ($_POST['button'] == 'save') {
             $this->model->updateByID($id, $request);
-            $_SESSION['msg'] = $this->name . ' record was updated';
+            $_SESSION['msg'] = 'The record was updated';
         }
 
         return header("Location: /admin/{$this->name}/index");
@@ -61,7 +71,7 @@ trait ResourceController {
     public function delete ($id) {
         $this->model->deleteByID($id);
 
-        $_SESSION['msg'] = $this->name . ' record was deleted';
+        $_SESSION['msg'] = 'The record was deleted';
         return header("Location: /admin/{$this->name}/index");
     }
 
@@ -79,4 +89,6 @@ trait ResourceController {
 
     //  should return $request array with form data
     protected abstract function manageFormData ();
+
+    protected abstract function validate ($request);
 }

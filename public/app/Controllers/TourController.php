@@ -16,12 +16,7 @@ class TourController extends AdminController {
 
     public function __construct () {
         parent::__construct();
-        $this->indexTemplate = $this->name . '-index';
-
-        $this->sideBar = System::buildTemplate($this->getTemplateName('side-bar'), [
-            'msg' => $_SESSION['msg'] ?? ''
-        ]);
-        unset($_SESSION['msg']);
+        $this->setSettings();
 
         $this->model = Tour::getInstance();
     }
@@ -39,5 +34,20 @@ class TourController extends AdminController {
         }
 
         return $request;
+    }
+
+    protected function validate ($request) {
+
+        if (empty($request['venue'])) {
+            array_push($this->errors, 'Field "venue" cannot be empty');
+        }
+        if (empty($request['city'])) {
+            array_push($this->errors, 'Field "city" cannot be empty');
+        }
+        if (empty($request['date'])) {
+            array_push($this->errors, 'Field "date" cannot be empty');
+        }
+
+        return (empty($this->errors)) ? true : false;
     }
 }

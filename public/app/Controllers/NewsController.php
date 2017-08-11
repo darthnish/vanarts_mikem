@@ -20,12 +20,7 @@ class NewsController extends AdminController {
 
     public function __construct () {
         parent::__construct();
-        $this->indexTemplate = $this->name . '-index';
-
-        $this->sideBar = System::buildTemplate($this->getTemplateName('side-bar'), [
-            'msg' => $_SESSION['msg'] ?? ''
-        ]);
-        unset($_SESSION['msg']);
+        $this->setSettings();
 
         $this->model = News::getInstance();
     }
@@ -54,5 +49,23 @@ class NewsController extends AdminController {
         }
 
         return $request;
+    }
+
+    protected function validate ($request) {
+
+        if (empty($request['body'])) {
+            array_push($this->errors, 'Field "body" cannot be empty');
+        }
+        if (empty($request['footer'])) {
+            array_push($this->errors, 'Field "footer" cannot be empty');
+        }
+        if (empty($request['date'])) {
+            array_push($this->errors, 'Field "date" cannot be empty');
+        }
+        if (empty($request['image_id'])) {
+            array_push($this->errors, 'Field "image" cannot be empty');
+        }
+
+        return (empty($this->errors)) ? true : false;
     }
 }
