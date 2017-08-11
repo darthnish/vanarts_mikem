@@ -3,6 +3,7 @@
 
 namespace App\Controllers;
 use App\Core\System;
+use App\Models\User;
 
 
 class AuthController {
@@ -29,7 +30,9 @@ class AuthController {
             $username = $_POST['username'] ?? '';
             $password = $_POST['password'] ?? '';
 
-            if ($username === 'admin' && $password === 'vanarts') {
+            $isAuth = (boolean) User::getInstance()->find($username, $password);
+
+            if ($isAuth) {
                 $_SESSION['user'] = $username;
                 header('Location: /admin');
             } else {
