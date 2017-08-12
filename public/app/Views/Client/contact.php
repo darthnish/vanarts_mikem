@@ -25,7 +25,7 @@
             </div>
             <div class="flex-column col-lg-5">
                 <article class="contact__block"><h1 class="text__shade">Get in Touch</h1>
-                    <form name="form-contact" method="post" action="#" class="contact__form">
+                    <form name="form-contact" method="post" action="/contact" class="contact__form">
                         <div class="contact__input-block">
                             <div class="input-group">
                                 <input type="text" id="name" name="name" tabindex="1" placeholder="Enter your name" required>

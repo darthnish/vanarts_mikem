@@ -14,11 +14,12 @@ return [
         'script' => [],
     ],
 
-    'contact' => [
-        'title' => 'Contact | DJ MikeM',
+    'tour' => [
+        'title' => 'Tour | DJ MikeM',
         'script' => [],
-    ],
 
+    ],
+    
     'gallery' => [
         'title' => 'Gallery | DJ MikeM',
         'script' => [
@@ -42,17 +43,16 @@ return [
         ]
     ],
 
-    'tour' => [
-        'title' => 'Tour | DJ MikeM',
-        'script' => [],
-
-    ],
-
     'video' => [
         'title' => 'Video | DJ MikeM',
         'script' => [
             "/js/scrolling-video.js",
         ]
+    ],
+
+    'contact' => [
+        'title' => 'Contact | DJ MikeM',
+        'script' => [],
     ],
 
     'error' => [
