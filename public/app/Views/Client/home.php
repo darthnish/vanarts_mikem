@@ -16,7 +16,7 @@
     </div>
     <div class="flex-row">
         <div class="col-2 col-md-3"></div>
-        <a href="#" class="btn btn-md">Check the dates</a></div>
+        <a href="/tour" class="btn btn-md">Check the dates</a></div>
 </section>
 <section class="home__release"><h2 class="home__release__heading">Latest release</h2>
     <div class="push-down-100vh-sm visible-sm"></div>

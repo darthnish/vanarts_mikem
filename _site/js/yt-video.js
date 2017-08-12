@@ -38,8 +38,8 @@ function onPlayerReady(event) {
         var ratio = $(window).height()/$(window).width();
         var m = Math.max($(window).height(), $(window).width());
         $('.video__wrapper').css({
-            'padding-bottom': (ratio * 100 * 1.2) + '%',
-            'width': ($(window).height() / ($(window).width() / 16 * 9) * $(window).width() * 1.2) + 'px'
+            'padding-bottom': (ratio * 100 * 1.3) + '%',
+            'width': ($(window).height() / ($(window).width() / 16 * 9) * $(window).width() * 1.3) + 'px'
         });
 
         $(window).scroll(function () {

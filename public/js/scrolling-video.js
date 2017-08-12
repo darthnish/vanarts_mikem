@@ -13,7 +13,7 @@ $(window).scroll(function () {
 function parallaxVideo(wScroll, $this) {
     var blocks = $('.ytplayer');
     var blockMaxHeight = blocks.eq(0).height();
-    var adj = ($(window).width() > 450) ? 0.45 : 0;
+    var adj = ($(window).width() > 450) ? 0.5 : 0;
     var minFactor = ($(window).width() <= 450) ? 0.5 : 0.2;
 
     for (var i = 0; i < blocks.length; i++) {

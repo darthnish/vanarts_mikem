@@ -1,5 +1,6 @@
 mixin music__block (img, link)
   .music__item
+    .spinner.spinner-1
     .music__block
       img(src="img/music/#{img}")
       i.music__control.fa.fa-play
@@ -8,6 +9,9 @@ mixin music__block (img, link)
       .music__progerss-bar-pseudo
       .music__volume
       .music__volume-pseudo
+      .music__time_1
+      .music__time_2
+      .music__volume_ico.fa.fa-volume-down
     a.btn.btn-md.music__btn.btn-alt(href="#") Buy now
 
 doctype html

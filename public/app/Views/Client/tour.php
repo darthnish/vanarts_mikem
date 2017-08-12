@@ -12,7 +12,7 @@
                     <div class="col-lg-4"><p class="tour__venue text__shade"><?=$event['venue']?></p></div>
                     <div class="col-lg-4"><p class="tour__city text__shade"><?=$event['city']?></p></div>
                 </div>
-                <div class="col-lg-2"><a href="#" class="btn btn-md btn-alt <?=$event['is_available'] ? '' : 'disabled'?>">Tickets</a></div>
+                <div class="col-lg-2"><a href="#" class="btn btn-md btn-alt <?=$event['is_available'] ? '' : 'disabled'?>"><?=$event['is_available'] ? 'Tickets' : 'Sold out'?></a></div>
             </div>
             <?endforeach;?>
         </div>

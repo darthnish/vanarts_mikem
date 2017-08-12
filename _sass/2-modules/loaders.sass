@@ -1,0 +1,30 @@
+.spinner
+  width: 50px
+  height: 50px
+  background-color: transparent
+  border-radius: 50%
+  display: inline-block
+  +position(absolute, calc(50% - 25px) null null calc(50% - 25px))
+
+  &:after, &:before
+    content: ''
+    display: block
+    width: 50px
+    height: 50px
+    border-radius: 50%
+
+
+.spinner-1:after
+  +position(absolute, -8px null null -8px)
+  border: 8px solid transparent
+  border-top-color: $crimson-sh
+  border-bottom-color: $crimson-sh
+  animation: spinny 1s linear infinite
+
+@keyframes spinny
+  0%
+    transform: rotate(0deg) scale(1)
+  50%
+    transform: rotate(45deg) scale(1.2)
+  100%
+    transform: rotate(360deg) scale(1)

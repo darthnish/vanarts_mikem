@@ -22,7 +22,7 @@ gulp.task('browser-sync', ['sass'], function() {
             open: false
         }, function (){
             browserSync({
-                proxy: "http://francesco.local/"
+                proxy: "http://mikem.local/"
             });
         });
     } else if (mode == "css") {
@@ -49,6 +49,7 @@ gulp.task('sass', function () {
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('_site/css'))
+        .pipe(gulp.dest('public/css'))
         .pipe(browserSync.reload({stream:true}))
 });
 

@@ -11,6 +11,7 @@
   flex-direction: column
   justify-content: center
   margin-bottom: 80px
+  position: relative
 
   @media screen and (min-width: $bp-medium)
     width: calc((100% - 120px) / 3)
@@ -25,7 +26,7 @@
 
 .music__block
   font-size: 0
-  .fa
+  .music__control.fa
     font-size: 3rem
     color: $purple-sh
   position: relative
@@ -48,10 +49,10 @@
   width: 0
   height: 10px
   background-color: $pink-sh
-  +position(absolute, null null -10px -10px)
+  +position(absolute, null null -10px 0)
 
 .music__progerss-bar-pseudo
-  width: 100%
+  width: calc(100% - 10px)
   background-color: transparent
   cursor: pointer
 
@@ -61,17 +62,41 @@
   width: 10px
   height: 70%
   background-color: $green-sh
-  +position(absolute, 100% null null 0px)
+  +position(absolute, calc(100% + 10px) null null 0px)
   transform: rotate(180deg)
   transform-origin: left top
 
 .music__volume-pseudo
-  height: calc(100% - 10px)
+  height: 100%
   background-color: transparent
   cursor: pointer
 
 .music__control
   +position(absolute, calc(50% - 1rem) calc(50% - 1rem) null null)
 
+.music__time_1,
+.music__time_2
+  color: white
+  font-size: 0.8rem
+  padding: 2px 5px
+  +position(absolute, null null 0 0)
+  background-color: $pink-sh
+  opacity: 0
+  transition: all 0.3s
 
+  &.show
+    opacity: 1
 
+.music__time_2
+  left: auto
+  right: 0
+
+.music__volume_ico
+  &.fa
+    font-size: 1rem
+
+  +position(absolute, 10px calc(100% + 10px) null null)
+  background-color: $green-sh
+  opacity: 1
+  padding: 2px 5px
+  color: white
