@@ -48,8 +48,11 @@ class App {
             return $controller->$method($parameters);
 
         } catch (\Exception $e) {
-            echo $e->getMessage();
-            die;
+
+            $_SESSION['exception'] = $e->getMessage();
+            return header("Location: /admin");
+//            echo $e->getMessage();
+//            die;
         }
     }
 

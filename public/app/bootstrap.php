@@ -11,10 +11,13 @@ spl_autoload_register(function($classname) {
         include_once $path;
 
     } catch (\Exception $e) {
-        echo 'Error is catched!';
-        echo '<br>';
-        echo $e->getMessage();
-        die;
+
+        $_SESSION['exception'] = 'Page not found';
+        return header("Location: /admin");
+//        echo 'Error is catched!';
+//        echo '<br>';
+//        echo $e->getMessage();
+//        die;
     }
 });
 

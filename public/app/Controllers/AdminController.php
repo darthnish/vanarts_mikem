@@ -20,7 +20,11 @@ class AdminController {
 
     public function index () {
 //        get html code for the page content container
-        $pageContent = System::buildTemplate($this->getTemplateName($this->indexTemplate), []);
+        $pageContent = System::buildTemplate($this->getTemplateName($this->indexTemplate), [
+            'error' => $_SESSION['exception'] ?? ''
+        ]);
+        unset($_SESSION['exception']);
+
         $sideBar = System::buildTemplate($this->getTemplateName('side-bar'), []);
 
 //        render the main template using content of the page
