@@ -3,6 +3,8 @@
 
 namespace App\Controllers;
 use App\Core\System;
+use App\Models\News;
+use App\Models\Tour;
 
 class ClientController {
 
@@ -17,8 +19,18 @@ class ClientController {
 
     public function render () {
 
+        if ($this->page == 'tour') {
+            $data = Tour::getInstance()->getAll();
+        }
+
+        if ($this->page == 'news') {
+            $data = News::getInstance()->getAll();
+        }
+
 //        get html code for the page content container
-        $pageContent = System::buildTemplate($this->getTemplateName($this->page), []);
+        $pageContent = System::buildTemplate($this->getTemplateName($this->page), [
+            'data' => $data ?? ''
+        ]);
 
 //        render the main template using content of the page
         $html = System::buildTemplate($this->getTemplateName('main'), [

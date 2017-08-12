@@ -1676,7 +1676,8 @@ h1, h2, h3 {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  text-transform: uppercase; }
   @media screen and (min-width: 780px) {
     .tour__event,
     .tour__event__block {
