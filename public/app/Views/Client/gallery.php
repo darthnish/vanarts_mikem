@@ -1,7 +1,11 @@
-<main class="gallery"><h1 class="gallery__heading">Gallery</h1>
+<main class="gallery">
+    <h1 class="gallery__heading">Gallery</h1>
+    <!--    placeholders-->
     <div class="push-down-120vh-sm visible-sm"></div>
     <div class="push-down-30vh-md visible-md"></div>
     <div class="push-down-20vh-lg visible-lg"></div>
+
+<!--    image container-->
     <div class="flex-row">
         <div class="col-2 col-md-3 col-lg-2"></div>
         <div class="col-9 col-md-6 col-lg-6 gallery__slider">
@@ -13,6 +17,8 @@
             <img src="img/gallery/gallery_6.jpg" alt="MikeM show photo #6" class="gallery__slider__img">
         </div>
     </div>
+
+<!--    control elements and caption-->
     <div class="flex-row">
         <div class="col-2 col-md-3 col-lg-2"></div>
         <div class="col-9 col-md-6 col-lg-6 gallery__basement">
@@ -23,5 +29,7 @@
             <p onclick="imgSlider(1);" class="btn btn-md btn__next">Next</p>
         </div>
     </div>
+
+<!--    placeholders-->
     <div class="push-down-35vh-sm visible-sm"></div>
 </main>

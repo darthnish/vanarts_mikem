@@ -21,7 +21,6 @@ function onYouTubePlayerAPIReady() {
             'iv_load_policy': 3
         },
         height: '100%',
-        // width: '100%',
         videoId: 'tg00YEETFzg',
         events: {
             'onReady': onPlayerReady,
@@ -35,8 +34,11 @@ function onPlayerReady(event) {
 
     $(function() {
 
+        //  variables for screen ratio and maximum dimension size
         var ratio = $(window).height()/$(window).width();
         var m = Math.max($(window).height(), $(window).width());
+
+        //  adjust video size to the size of the screen
         $('.video__wrapper').css({
             'padding-bottom': (ratio * 100 * 1.3) + '%',
             'width': ($(window).height() / ($(window).width() / 16 * 9) * $(window).width() * 1.3) + 'px'
@@ -45,6 +47,7 @@ function onPlayerReady(event) {
         $(window).scroll(function () {
             var wScroll = $(this).scrollTop();
 
+            //  stop video when user scrolls more than 80% of height of the first section
             if (wScroll > $(this).height() * 0.8) {
                 stopVideo();
             }
@@ -54,11 +57,9 @@ function onPlayerReady(event) {
 
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
 var done = false;
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !done) {
-        // setTimeout(stopVideo, 6000);
         done = true;
     }
 }

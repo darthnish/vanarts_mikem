@@ -4,6 +4,13 @@
 namespace App\Core;
 use PDO;
 
+/**
+ * Class SQL
+ *
+ * this class contains standard SQL functions to deal with database
+ *
+ * @package App\Core
+ */
 class SQL {
     use Traits\Singleton;
 

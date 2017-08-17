@@ -4,6 +4,14 @@
 namespace App\Models;
 use App\Core\SQL;
 
+/**
+ * Class Base
+ *
+ * This base model class implements handy method to work with database via SQL class methods
+ *
+ * @package App\Models
+ */
+
 abstract class Base {
     protected $db;
     protected $table;

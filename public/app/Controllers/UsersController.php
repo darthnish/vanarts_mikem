@@ -18,10 +18,12 @@ class UsersController extends AdminController {
         parent::__construct();
         $this->setSettings();
 
+        //  save the model instance into the class property
         $this->model = User::getInstance();
     }
 
     protected function manageFormData () {
+        //  save user password in request array
         $request['password'] = $_POST['password'];
 
         return $request;
@@ -29,6 +31,7 @@ class UsersController extends AdminController {
 
     protected function validate ($request) {
 
+        //  push error message to the array if request data doesn't meet the validation rules
         if (empty($request['password'])) {
             array_push($this->errors, 'Field "password" cannot be empty');
         }

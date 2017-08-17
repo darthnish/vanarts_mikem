@@ -1,6 +1,7 @@
 <section class="col-lg-10">
     <form class="form-horizontal" id="blog-article" name="article" method="post" action="/admin/tour/<?=$method?>" enctype="multipart/form-data">
 
+<!--        date input field-->
         <div class="form-group">
             <label id="date" class="col-lg-2 control-label">Date</label>
             <div class="col-lg-4">
@@ -8,6 +9,7 @@
             </div>
         </div>
 
+<!--        venue input field-->
         <div class="form-group">
             <label id="venue" class="col-lg-2 control-label">Venue</label>
             <div class="col-lg-4">
@@ -15,6 +17,7 @@
             </div>
         </div>
 
+<!--        city input field-->
         <div class="form-group">
             <label id="city" class="col-lg-2 control-label">City</label>
             <div class="col-lg-4">
@@ -22,6 +25,7 @@
             </div>
         </div>
 
+<!--        is_available input field-->
         <div class="form-group">
             <label id="active" class="col-lg-2 control-label">Are tickets available?</label>
             <div class="col-lg-4">
@@ -31,6 +35,7 @@
             </div>
         </div>
 
+<!--        save and cancel buttons-->
         <div class="form-group">
             <div class="col-lg-offset-2 col-lg-2">
                 <button class="form-control btn btn-success" type="submit" name="button" value="save">Save</button>

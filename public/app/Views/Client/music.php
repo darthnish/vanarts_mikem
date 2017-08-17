@@ -1,10 +1,17 @@
-<main class="music"><h1 class="music__heading">Music</h1>
+<main class="music">
+    <h1 class="music__heading">Music</h1>
+
+    <!--    placeholders-->
     <div class="push-down-100vh-sm visible-sm"></div>
     <div class="push-down-30vh-md visible-md"></div>
     <div class="push-down-20vh-lg visible-lg"></div>
     <div class="flex-row">
         <div class="col-2 col-md-3 col-lg-2"></div>
+
+<!--        main container-->
         <div class="col-9 col-md-6 col-lg-6 music__container">
+
+<!--            music block #1-->
             <div class="music__item">
                 <div class="spinner spinner-1"></div>
                 <div class="music__block"><img src="img/music/release_1.jpg"/><i class="music__control fa fa-play"></i>
@@ -18,7 +25,10 @@
                     <div class="music__time_2"></div>
                     <div class="music__volume_ico fa fa-volume-down"></div>
                 </div>
-                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a></div>
+                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a>
+            </div>
+
+<!--            music block #2-->
             <div class="music__item">
                 <div class="spinner spinner-1"></div>
                 <div class="music__block"><img src="img/music/release_2.jpg"/><i class="music__control fa fa-play"></i>
@@ -32,7 +42,10 @@
                     <div class="music__time_2"></div>
                     <div class="music__volume_ico fa fa-volume-down"></div>
                 </div>
-                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a></div>
+                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a>
+            </div>
+
+<!--            music block #3-->
             <div class="music__item">
                 <div class="spinner spinner-1"></div>
                 <div class="music__block"><img src="img/music/release_3.jpg"/><i class="music__control fa fa-play"></i>
@@ -46,7 +59,10 @@
                     <div class="music__time_2"></div>
                     <div class="music__volume_ico fa fa-volume-down"></div>
                 </div>
-                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a></div>
+                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a>
+            </div>
+
+<!--            music block #4-->
             <div class="music__item">
                 <div class="spinner spinner-1"></div>
                 <div class="music__block"><img src="img/music/release_4.jpg"/><i class="music__control fa fa-play"></i>
@@ -60,7 +76,11 @@
                     <div class="music__time_2"></div>
                     <div class="music__volume_ico fa fa-volume-down"></div>
                 </div>
-                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a></div>
+                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a>
+            </div>
+
+
+<!--            music block #5-->
             <div class="music__item">
                 <div class="spinner spinner-1"></div>
                 <div class="music__block"><img src="img/music/release_5.jpg"/><i class="music__control fa fa-play"></i>
@@ -74,7 +94,10 @@
                     <div class="music__time_2"></div>
                     <div class="music__volume_ico fa fa-volume-down"></div>
                 </div>
-                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a></div>
+                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a>
+            </div>
+
+<!--            music block #6-->
             <div class="music__item">
                 <div class="spinner spinner-1"></div>
                 <div class="music__block"><img src="img/music/release_6.jpg"/><i class="music__control fa fa-play"></i>
@@ -88,7 +111,11 @@
                     <div class="music__time_2"></div>
                     <div class="music__volume_ico fa fa-volume-down"></div>
                 </div>
-                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a></div>
+                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a>
+            </div>
+
+
+<!--            music block #7-->
             <div class="music__item">
                 <div class="spinner spinner-1"></div>
                 <div class="music__block"><img src="img/music/release_7.jpg"/><i class="music__control fa fa-play"></i>
@@ -102,7 +129,10 @@
                     <div class="music__time_2"></div>
                     <div class="music__volume_ico fa fa-volume-down"></div>
                 </div>
-                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a></div>
+                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a>
+            </div>
+
+<!--            music block #8-->
             <div class="music__item">
                 <div class="spinner spinner-1"></div>
                 <div class="music__block"><img src="img/music/release_8.jpg"/><i class="music__control fa fa-play"></i>
@@ -116,7 +146,8 @@
                     <div class="music__time_2"></div>
                     <div class="music__volume_ico fa fa-volume-down"></div>
                 </div>
-                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a></div>
+                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a>
+            </div>
             <div class="music__item">
                 <div class="spinner spinner-1"></div>
                 <div class="music__block"><img src="img/music/release_9.jpg"/><i class="music__control fa fa-play"></i>
@@ -130,7 +161,8 @@
                     <div class="music__time_2"></div>
                     <div class="music__volume_ico fa fa-volume-down"></div>
                 </div>
-                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a></div>
+                <a href="#" class="btn btn-md music__btn btn-alt">Buy now</a>
+            </div>
         </div>
     </div>
 </main>

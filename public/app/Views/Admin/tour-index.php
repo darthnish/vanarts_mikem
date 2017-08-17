@@ -1,4 +1,5 @@
 <section class="col-lg-10">
+<!--    table with tour dates-->
     <table class="table table-striped ">
         <tr>
             <th>Date</th>
@@ -14,11 +15,13 @@
             <td><?=$tour['city']?></td>
             <td><?=$tour['is_available'] ? 'yes' : 'no'?></td>
 
+<!--            action buttons-->
             <td class="t-col-sm"><a class="btn btn-xs btn-warning" href="/admin/tour/edit/<?=$tour['id']?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"  data-toggle="tooltip" data-placement="top" title="Edit date"></span></a></td>
             <td class="t-col-sm"><a class="btn btn-xs btn-danger" href="/admin/tour/delete/<?=$tour['id']?>" onclick="return confirmDelete();"><span class="glyphicon glyphicon-trash" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Delete date"></span></a></td>
         </tr>
         <?endforeach;?>
     </table>
     <br>
+<!--    add button-->
     <a class="btn btn-sm btn-info" href="/admin/tour/create" data-toggle="tooltip" data-placement="top" title="Add new date">+add</a><br>
 </section>

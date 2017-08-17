@@ -3,7 +3,13 @@
 
 namespace App\Core\Traits;
 
-
+/**
+ * Trait Singleton
+ *
+ * This trait implements singleton pattern. It allows create only one instance of a class
+ *
+ * @package App\Core\Traits
+ */
 trait Singleton {
     protected static $singleton_instance = null;
 

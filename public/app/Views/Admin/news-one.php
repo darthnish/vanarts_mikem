@@ -1,6 +1,7 @@
 <section class="col-lg-10">
     <form class="form-horizontal" id="blog-article" name="article" method="post" action="/admin/news/<?=$method?>" enctype="multipart/form-data">
 
+<!--        date input field-->
         <div class="form-group">
             <label id="date" class="col-lg-2 control-label">Date</label>
             <div class="col-lg-4">
@@ -8,6 +9,7 @@
             </div>
         </div>
 
+<!--        content input field-->
         <div class="form-group">
             <label id="content" class="col-lg-2 control-label">Content</label>
             <div class="col-lg-8">
@@ -16,6 +18,7 @@
             </div>
         </div>
 
+<!--        footer input field-->
         <div class="form-group">
             <label id="footer" class="col-lg-2 control-label">Tags</label>
             <div class="col-lg-8">
@@ -23,6 +26,7 @@
             </div>
         </div>
 
+<!--        image input field-->
         <div class="form-group">
             <label for="select-image" class="col-lg-2 control-label">Image</label>
             <div class="col-lg-8">
@@ -37,7 +41,7 @@
         </div>
 
 
-
+<!--        save and cancel buttons-->
         <div class="form-group">
             <div class="col-lg-offset-2 col-lg-2">
                 <button class="form-control btn btn-success" type="submit" name="button" value="save">Save</button>

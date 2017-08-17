@@ -1,3 +1,5 @@
+/*news page*/
+
 .news-list__image {
     width: 100px;
 }
@@ -10,6 +12,8 @@
     margin-top: 20px;
     width: 200px;
 }
+
+/*image page*/
 
 .image__row {
     display: flex;
@@ -33,6 +37,9 @@
 .image__add {
     text-align: center;
 }
+
+/*user page*/
+
 .user__profile {
     text-align: center;
 }

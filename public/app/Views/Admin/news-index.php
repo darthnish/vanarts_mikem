@@ -1,4 +1,5 @@
 <section class="col-lg-10">
+<!--    table with news items-->
     <table class="table table-striped ">
         <tr>
             <th>Date</th>
@@ -14,11 +15,13 @@
             <td><?=$news['body']?></td>
             <td><?=$news['footer']?></td>
 
+<!--            action buttons-->
             <td class="t-col-sm"><a class="btn btn-xs btn-warning" href="/admin/news/edit/<?=$news['id']?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"  data-toggle="tooltip" data-placement="top" title="Edit news"></span></a></td>
             <td class="t-col-sm"><a class="btn btn-xs btn-danger" href="/admin/news/delete/<?=$news['id']?>" onclick="return confirmDelete();"><span class="glyphicon glyphicon-trash" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Delete news"></span></a></td>
         </tr>
         <?endforeach;?>
     </table>
     <br>
+<!--    add button-->
     <a class="btn btn-sm btn-info" href="/admin/news/create" data-toggle="tooltip" data-placement="top" title="Add new news">+add</a><br>
 </section>
