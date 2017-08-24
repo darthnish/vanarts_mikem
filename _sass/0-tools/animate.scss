@@ -93,3 +93,30 @@
 		transform: translate3d(0, 0, 0)
 	}
 }
+
+@keyframes animateShadow {
+	0%   {
+		text-shadow: makeShadow($green);
+	}
+	15%  {
+		text-shadow: makeShadow($greenblue);
+	}
+	30%  {
+		text-shadow: makeShadow($pink);
+	}
+	45% {
+		text-shadow: makeShadow($purple);
+	}
+	60% {
+		text-shadow: makeShadow($darkblue);
+	}
+	75% {
+		text-shadow: makeShadow($blue);
+	}
+	90% {
+		text-shadow: makeShadow($yellow);
+	}
+	100% {
+		text-shadow: makeShadow($green);
+	}
+}

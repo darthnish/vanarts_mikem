@@ -32,9 +32,8 @@
 .home__release .btn:after
   background-color: $purple-sh
 
-.home__release__heading,
-.music__heading
-  text-shadow: -10px -10px 0px $purple-sh
+.music__heading.animate
+  animation: animateShadow 2s ease-in-out infinite forwards
 
 .home__release .text__shade,
 .home__release__cover,
@@ -52,10 +51,6 @@
 .home__tour .text__shade,
 .tour__event__block
   box-shadow: -10px 10px 0px $greenblue-sh
-
-.home__tour__heading,
-.tour__heading
-  text-shadow: -10px -10px 0px $greenblue-sh
 
 
 /***    PINK    ***/
@@ -76,10 +71,6 @@
 .video .btn:before,
 .video .btn:after
   background-color: $pink-sh
-
-.home__video__heading,
-.video__heading
-  text-shadow: -10px -10px 0px $pink-sh
 
 .home__video .text__shade,
 .home__video .flex-video,
@@ -112,10 +103,6 @@
 .bio__text
   box-shadow: -10px 10px 0px $darkblue-sh
 
-.bio__heading,
-.news__heading
-  text-shadow: -10px -10px 0px $darkblue-sh
-
 /***    GREY    ***/
 
 .btn.disabled,
@@ -135,9 +122,6 @@
 .bio__intro
   background-color: $yellow
 
-.contact__heading
-  text-shadow: -10px -10px 0px $yellow-sh
-
 .contact__block h1,
 .bio__intro
   box-shadow: -10px 10px 0px $yellow-sh
@@ -153,9 +137,8 @@
 .music__btn:after
   background-color: $crimson-sh
 
-.gallery__heading
-  text-shadow: -10px -10px 0px $crimson-sh
-
 .gallery__slider img,
 .gallery__caption
   box-shadow: -10px 10px 0px $crimson-sh
+
+

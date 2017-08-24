@@ -1,9 +1,10 @@
 <!--intro video-->
 <section class="intro">
     <div class="intro__cover"></div>
-    <div class="video__wrapper">
+    <div class="video__wrapper visible-lg">
         <div id="ytplayer"></div>
     </div>
+    <div class="intro__img_m visible-sm-md"></div>
     <script src="js/yt-video.js"></script>
 </section>
 

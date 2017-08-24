@@ -1,0 +1,15 @@
+@function makeShadow($color) {
+  $val: 0px 0px $color;
+  @for $i from 1 through 10 {
+    $val: #{$val}, -#{$i}px -#{$i}px 0px #{$color};
+  }
+  @return $val;
+}
+
+@function makeDropShadow($color) {
+  $val: 0px 0px $color;
+  @for $i from 1 through 10 {
+    $val: #{$val}, -#{$i}px #{$i}px 0px #{$color};
+  }
+  @return $val;
+}

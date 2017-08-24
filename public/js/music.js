@@ -65,6 +65,13 @@ $(document).ready(function() {
             $this.toggleClass('fa-pause');
             $this.siblings('.music__time_1, .music__time_2').toggleClass('show');
         }
+
+        if ($('.fa-pause').length === 0) {
+            $('.music__heading').removeClass('animate');
+        } else {
+            $('.music__heading').addClass('animate');
+        }
+
     });
 
     //  handle click event on progress bar (seeking)
@@ -93,11 +100,13 @@ $(document).ready(function() {
         var $this = $(this);
         var widget = getWidgetElement($this);
         var seekVolR = event.offsetY / $this.height();
-        var volumeBar = getVolumeElement($this);
-        var volumeMax = volumeBar.parent().height();
+        var volumeBar = $('.music__volume');
+        var volumeMax = getVolumeElement($this).parent().height();
 
-        //  change height of volume bar
-        volumeBar.height(seekVolR * volumeMax);
+        //  change height of volume bars
+        volumeBar.each(function (i) {
+            volumeBar.eq(i).height(seekVolR * volumeMax);
+        });
 
         widget.bind(SC.Widget.Events.READY, function () {
             //  set volume of the player to desirable level
